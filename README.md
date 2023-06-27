@@ -1,11 +1,16 @@
 # Youtube
 YaleCode Youtue Channel Projects
 
-[Auth](https://github.com/cbot918/youtube/tree/auth-go-react-sqlite)　go | react | sqlite3 | docker
+<br/>
 
-[blog](https://github.com/cbot918/youtube/tree/blog)
+## blog
 
-[blog/go-tutor](https://github.com/cbot918/youtube/tree/blog/go-tutor)
+[go-tutor](https://github.com/cbot918/youtube/tree/blog/go-tutor)　basic | OO
 
+[go-concurrency](https://github.com/cbot918/youtube/tree/blog/go-concurrency)　GPM | goroutine | sync | channel | select
 
-[blog/go-concurrency](https://github.com/cbot918/youtube/tree/blog/go-concurrency)
+<br/>
+
+## projects
+
+[Auth](https://github.com/cbot918/youtube/tree/auth-go-react-sqlite)　using: go / react / sqlite3 / docker
