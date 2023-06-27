@@ -4,7 +4,7 @@
 
 # Pre Information
 1. G: goroutine is a user space coroutine
-2. P: virtual processor will exists 1
+2. P: virtual processor
 3. M: GO thread
 
 - P will map G(m) and M(n), so there will be m:n mapping
