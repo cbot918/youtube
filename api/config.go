@@ -1,4 +1,4 @@
-package server
+package api
 
 type Config struct {
 	PORT       string

@@ -1,6 +1,8 @@
+ENTRY=app.go
+
 run: ui-build db-init
 	go mod tidy 
-	go run .
+	go run $(ENTRY)
 
 ui-build:
 	cd ui && npm install && npm run build

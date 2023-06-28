@@ -1,4 +1,4 @@
-package server
+package api
 
 type User struct {
 	Email    string `json:"email"`

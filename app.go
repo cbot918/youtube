@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/cbot918/youtube/auth/server"
+	"github.com/cbot918/youtube/auth/api"
 )
 
 const (
@@ -14,8 +14,8 @@ const (
 	dbsource   = "auth.db"
 )
 
-func GetConfig() *server.Config {
-	return &server.Config{
+func GetConfig() *api.Config {
+	return &api.Config{
 		PORT:       port,
 		StaticPath: staticPath,
 		DbType:     dbtype,
@@ -23,7 +23,7 @@ func GetConfig() *server.Config {
 	}
 }
 
-func GetDB(c *server.Config) *sql.DB {
+func GetDB(c *api.Config) *sql.DB {
 	db, err := sql.Open(c.DbType, c.DbSource)
 	if err != nil {
 		log.Fatal(err)
@@ -31,8 +31,8 @@ func GetDB(c *server.Config) *sql.DB {
 	return db
 }
 
-func GetDAO(db *sql.DB) *server.Dao {
-	return &server.Dao{
+func GetDAO(db *sql.DB) *api.Dao {
+	return &api.Dao{
 		DB: db,
 	}
 }
@@ -42,7 +42,7 @@ func main() {
 	cfg := GetConfig()
 	dao := GetDAO(GetDB(cfg))
 
-	app := server.New(cfg, dao)
+	app := api.New(cfg, dao)
 
 	app.Run()
 }
