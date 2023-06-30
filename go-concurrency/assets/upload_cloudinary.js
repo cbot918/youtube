@@ -6,6 +6,6 @@ cloudinary.config({
   api_secret: 'tfwtQFL_JGO5_J70_0ABJkpxGHo' 
 });
 
-cloudinary.v2.uploader.upload("./2.png",
+cloudinary.v2.uploader.upload("./bighead.png",
   { public_id: "olympic_flag" }, 
   function(error, result) {console.log(result); });
